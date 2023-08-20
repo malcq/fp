@@ -1,7 +1,7 @@
 import { classNames } from '@/shared/lib/helpers/classNames/classNames';
-import { Link } from 'react-router-dom';
 import cls from './Navbar.module.scss';
 import { AppLink, AppLinkVariant } from '@/shared/ui/AppLink/AppLink';
+import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
 
 interface NavbarProps {
   className?: string;
@@ -10,6 +10,7 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => {
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
+      <ThemeSwitcher className={'asd'} />
       <div className={cls.links}>
         <AppLink
           variant={AppLinkVariant.SECONDARY}
