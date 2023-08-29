@@ -1,11 +1,13 @@
-import { useTheme } from '@/shared/lib/hooks/useTheme';
-import { classNames } from '@/shared/lib/helpers/classNames/classNames';
+import { Suspense } from 'react';
 
-import './styles/index.scss';
-import { AppRouter } from './providers/router';
+import { classNames } from '@/shared/lib/helpers/classNames/classNames';
+import { useTheme } from '@/shared/lib/hooks/useTheme';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
-import { Suspense } from 'react';
+
+import { AppRouter } from './providers/router';
+
+import './styles/index.scss';
 
 const App = () => {
   const { theme } = useTheme();
