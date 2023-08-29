@@ -44,7 +44,29 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: [
+          'wrap',
+          'size',
+          'color',
+          'variant',
+          'feature',
+          'role',
+          'as',
+          'data-testid',
+          'to',
+          'target',
+          'border',
+          'justify',
+          'align',
+          'direction',
+          'gap'
+        ]
+      }
+    ],
     'max-len': ['error', { code: 125, ignoreComments: true }],
     'object-curly-newline': 'off'
   },
