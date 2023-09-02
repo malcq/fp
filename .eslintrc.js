@@ -68,7 +68,8 @@ module.exports = {
       }
     ],
     'max-len': ['error', { code: 125, ignoreComments: true }],
-    'object-curly-newline': 'off'
+    'object-curly-newline': 'off',
+    'arrow-body-style': 'off'
   },
   globals: {
     __IS_DEV__: true
