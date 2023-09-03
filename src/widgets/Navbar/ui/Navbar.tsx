@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
 import { classNames } from '@/shared/lib/helpers/classNames/classNames';
-import { AppLink, AppLinkVariant } from '@/shared/ui/AppLink/AppLink';
+import { AppLink } from '@/shared/ui/AppLink/AppLink';
 
 import cls from './Navbar.module.scss';
 
@@ -14,17 +14,10 @@ export const Navbar = ({ className }: NavbarProps) => {
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
       <div className={cls.links}>
-        <AppLink
-          variant={AppLinkVariant.SECONDARY}
-          to="/"
-          className={cls.mainLink}
-        >
+        <AppLink variant="secondary" to="/" className={cls.mainLink}>
           {t('Главная')}
         </AppLink>
-        <AppLink
-          variant={AppLinkVariant.SECONDARY}
-          to="/about"
-        >
+        <AppLink variant="secondary" to="/about">
           {t('О сайте')}
         </AppLink>
       </div>
