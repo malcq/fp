@@ -14,7 +14,12 @@ interface ButtonProps
 }
 
 export const Button = memo((props: ButtonProps) => {
-  const { className, children, variant, ...otherProps } = props;
+  const {
+    className,
+    children,
+    variant = 'clear',
+    ...otherProps
+  } = props;
 
   return (
     <button
