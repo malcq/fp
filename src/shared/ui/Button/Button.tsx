@@ -9,8 +9,8 @@ export type ButtonVariant = 'clear';
 interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
+  variant?: ButtonVariant;
   children: ReactNode;
-  variant: ButtonVariant;
 }
 
 export const Button = memo((props: ButtonProps) => {

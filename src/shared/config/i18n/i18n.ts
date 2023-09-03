@@ -20,15 +20,19 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    fallbackLng: 'ru',
+    fallbackLng: {
+      'en-US': ['en'],
+      'ru-RU': ['ru'],
+      default: ['ru']
+    },
     debug: __IS_DEV__,
 
     interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
+      escapeValue: false // not needed for react as it escapes by default
     },
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
-    },
+      loadPath: '/locales/{{lng}}/{{ns}}.json'
+    }
   });
 
 export default i18n;

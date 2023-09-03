@@ -19,6 +19,14 @@ const App = () => {
         <div className="content-page">
           <Sidebar />
           <AppRouter />
+          <button
+            type="button"
+            onClick={() => {
+              throw new Error();
+            }}
+          >
+            123
+          </button>
         </div>
       </Suspense>
     </div>
