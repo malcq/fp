@@ -4,7 +4,7 @@ import { classNames } from '@/shared/lib/helpers/classNames/classNames';
 
 import cls from './Button.module.scss';
 
-export type ButtonVariant = 'clear';
+export type ButtonVariant = 'clear' | 'outline' | 'filled';
 
 interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -17,7 +17,7 @@ export const Button = memo((props: ButtonProps) => {
   const {
     className,
     children,
-    variant = 'clear',
+    variant = 'outline',
     ...otherProps
   } = props;
 
