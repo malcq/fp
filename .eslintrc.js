@@ -13,7 +13,8 @@ module.exports = {
     'plugin:import/recommended',
     'airbnb',
     'plugin:i18next/recommended',
-    'prettier'
+    'prettier',
+    'plugin:storybook/recommended'
   ],
 
   parser: '@typescript-eslint/parser',
@@ -73,5 +74,17 @@ module.exports = {
   },
   globals: {
     __IS_DEV__: true
-  }
+  },
+  overrides: [
+    {
+      files: [
+        '**/src/**/*.{test,stories}.{ts,tsx}',
+        '**/src/stories/*'
+      ],
+      rules: {
+        'i18next/no-literal-string': 'off',
+        'max-len': 'off'
+      }
+    }
+  ]
 };
