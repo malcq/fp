@@ -8,10 +8,7 @@ import { Theme } from '@/shared/const/theme';
 const meta = {
   title: 'shared/Button',
   component: Button,
-  tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' }
-  }
+  tags: ['autodocs']
 } satisfies Meta<typeof Button>;
 
 export default meta;
