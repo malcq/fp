@@ -20,6 +20,7 @@ export default (env: BuildEnv) => {
     isDev,
     port: PORT
   });
+  console.log(config, 'sad');
 
   return config;
 };
