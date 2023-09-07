@@ -30,7 +30,6 @@ jobs:
         run: npm run test:unit
       - name: build production project
         run: npm run build:prod
-        working-directory: '../../autoService'
       #  if: always()
       # - name: build storybook
       #  run: npm run storybook:build
